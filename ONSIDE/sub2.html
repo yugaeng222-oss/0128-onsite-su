@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="sub2">
+  <header>
+        <h1><a href="/index.html"><img src="images/logo.png" alt=""></a></h1>
+        <nav>
+            <ul class="gnb">
+                <li><a href="#"><span>ABOUT</span></a></li>
+                <li><a href="#"><span>EXPERTISE</span></a> </li>
+                <li><a href="#"><span>CASE</span></a> </li>
+                <li><a href="#"><span>NEWS</span></a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="hd_btn">
+            <div class="lang">
+                KR
+            </div>
+            <div class="search">
+                <img src="images/Search.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <section class="section1">
+        <h2>
+            <span>2</span><span>6</span><span>&nbsp;</span><span>Y</span><span>E</span><span>A</span><span>R</span><span>S</span><span>&nbsp;</span><span>T</span><span>o</span><span>&nbsp;</span><span>b</span><span>e</span><span>&nbsp;</span><span>T</span><span>O</span><span>G</span><span>E</span><span>T</span><span>H</span><span>E</span><span>R</span>
+        </h2>
+
+    </section>
+<!-- 
+    <section class="history-section" id="historySection">
+    
+    <div class="center-text">
+    <div class="text-side align-right">
+        <span class="big-text">26 YEARS</span>
+    </div>
+
+    <div class="gap-box">
+        <span class="script-text">To be</span>
+    </div>
+
+    <div class="text-side align-left">
+        <span class="big-text">TOGETHER</span>
+    </div>
+</div>
+</section> -->
+
+    <section class="scroll-section">
+    <div class="sticky-wrapper">
+        <div class="text-top">
+            <p class="pain-point">Pain Point</p>
+            <h2>AI 개발 환경 구축에 기술적 과제가 있으신가요?</h2>
+        </div>
+
+        <div class="orbit-container">
+            <div class="circle-orbit">
+                <div class="step step1 active">
+                    <p>개발 환경을 구축하는 데 드는 복잡한 설정과<br>높은 비용, 부담스럽지 않으셨나요?</p>
+                    <span class="case-num">case01</span>
+                </div>
+                <div class="step step2">
+                    <p>데이터 보안과 인프라 관리의 어려움,<br>해결책을 찾고 계신가요?</p>
+                    <span class="case-num">case02</span>
+                </div>
+                <div class="step step3">
+                    <p>효율적인 GPU 자원 배분과<br>빠른 모델 배포가 필요하신가요?</p>
+                    <span class="case-num">case03</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pin-section" id="featureSection">
+    <div class="content-wrapper">
+        <div class="text-area">
+            <div class="text-content">
+                <p class="sub-title">Our Key Features</p>
+                <h2 class="main-title">
+                    데이터 보안부터 자원 운영까지,<br>
+                    안정적이고 유연한 플랫폼 환경을 위한<br>
+                    핵심 기능을 소개합니다.
+                </h2>
+            </div>
+        </div>
+
+        <div class="cards-area">
+            <div class="cards-track">
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3>접근 및 권한 관리</h3>
+                    <p>사용자 인증과 라이선스 관리를 통해 안전하고 체계적인 환경을 제공합니다.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">⚙️</div>
+                    <h3>자원 및 작업 관리</h3>
+                    <p>실시간 사용 현황을 모니터링하고 작업 스케줄러와 큐 관리를 통해 효율적인 운영을 지원합니다.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>실시간 모니터링</h3>
+                    <p>작업 진행 상황과 자원 운영 상태를 직관적으로 파악할 수 있습니다.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>GPU 스케줄링</h3>
+                    <p>고도화된 스케줄링 기능을 통해 GPU 자원을 더욱 효율적으로 배분합니다.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">☁️</div>
+                    <h3>클라우드 연동</h3>
+                    <p>하이브리드 클라우드 환경에서도 끊김 없는 워크플로우를 보장합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* =========================================
+       [1] Pain Point (궤도 회전) 애니메이션
+       ========================================= */
+    const orbitTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".scroll-section",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1,
+        }
+    });
+
+    // 시작 시 1번 활성화 (에러 방지용 체크 추가)
+    if(document.querySelector('.step1')) {
+        document.querySelector('.step1').classList.add('active');
+    }
+
+    orbitTl.to(".circle-orbit", {
+            rotate: -90,
+            duration: 1
+        })
+        .to(".step1", { opacity: 0, filter: "blur(10px)", duration: 0.5 }, "<")
+        .to(".step2", {
+            opacity: 1,
+            filter: "blur(0px)",
+            duration: 0.5,
+            onUpdate: () => {
+                document.querySelector('.step1').classList.remove('active');
+                document.querySelector('.step2').classList.add('active');
+            }
+        }, "<")
+        .to(".circle-orbit", {
+            rotate: -180,
+            duration: 1
+        }, "+=0.3")
+        .to(".step2", { opacity: 0, filter: "blur(10px)", duration: 0.5 }, "<")
+        .to(".step3", {
+            opacity: 1,
+            filter: "blur(0px)",
+            duration: 0.5,
+            onUpdate: () => {
+                document.querySelector('.step2').classList.remove('active');
+                document.querySelector('.step3').classList.add('active');
+            }
+        }, "<");
+
+
+    /* =========================================
+       [2] Feature Pin (카드 스크롤) 애니메이션 
+       ========================================= */
+    const featureSection = document.querySelector("#featureSection");
+    
+    // 섹션이 있을 때만 실행 (에러 방지)
+    if (featureSection) {
+        const textContent = featureSection.querySelector(".text-content");
+        const cardsTrack = featureSection.querySelector(".cards-track");
+        const cardsArea = featureSection.querySelector(".cards-area");
+
+        // 초기 상태 설정
+        gsap.set(textContent, {
+            scale: 2,
+            xPercent: 60,
+            yPercent: 0,
+            autoAlpha: 1,
+        });
+
+        gsap.set(cardsTrack, {
+            x: 1000,
+            autoAlpha: 0
+        });
+
+        const featureTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: featureSection,
+                start: "top top",
+                end: "+=3000",
+                pin: true,
+                scrub: 1,
+                invalidateOnRefresh: true,
+            }
+        });
+
+        featureTl
+            .to(textContent, {
+                scale: 1,
+                xPercent: 0,
+                duration: 1,
+                ease: "power2.inOut"
+            }, "phase1")
+            .to(cardsTrack, {
+                x: 0,
+                autoAlpha: 1,
+                duration: 1,
+                ease: "power2.inOut"
+            }, "phase1")
+            .to(cardsTrack, {
+                x: () => -(cardsTrack.scrollWidth - cardsArea.clientWidth + 50),
+                duration: 3,
+                ease: "none"
+            });
+    }
+
+   /* =========================================
+           [1] Intro Typing (26 YEARS...) 애니메이션
+           설명: HTML에 span이 이미 있으므로 쪼개는 과정 없이 바로 움직입니다.
+           ========================================= */
+        gsap.to(".section1 h2 span", {
+            y: 0,               // 원래 위치(0)로 올라옴
+            opacity: 1,         // 보이게 됨
+            duration: 1,        // 1초 동안
+            stagger: 0.02,      // 0.05초 간격으로 타닥타닥
+            ease: "back.out(1.7)" // 팅~ 하는 느낌
+        });
+</script>
+</body>
+</html>
